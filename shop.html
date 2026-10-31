@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F4E2E5">
+    <meta name="description" content="Discover thoughtful floral arrangements at Liorielle Floral Atelier.">
+    <title>The Flower Shop — Liorielle Floral Atelier</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="shop-page">
+
+    <div class="announcement-bar">
+        A little beauty for your everyday moments ✿
+    </div>
+
+    <header class="shop-header">
+        <a class="shop-logo" href="index.html" aria-label="Liorielle homepage">
+            <span>liorielle</span>
+            <small>FLORAL ATELIER</small>
+        </a>
+
+        <nav class="shop-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active" aria-current="page">Flower Shop</a>
+            <a href="create.html">Bouquet Creator</a>
+            <a href="gifts.html">Digital Gifts</a>
+            <a href="keepsakes.html">Keepsakes</a>
+        </nav>
+
+        <a href="#flower-collection" class="shop-header-link">
+            Explore flowers ↗
+        </a>
+    </header>
+
+    <main>
+        <section class="shop-intro">
+            <p class="shop-eyebrow">THE FLOWER COLLECTION · 001</p>
+
+            <h1>
+                A little bloom<br>
+                <em>for every feeling.</em>
+            </h1>
+
+            <p class="shop-intro-copy">
+                Some feelings are too lovely to keep to yourself.
+                Find a bloom that says what your heart wants to say.
+            </p>
+
+            <div class="shop-intro-note">
+                Thoughtfully gathered ✿ Intentionally made
+            </div>
+        </section>
+
+        <section class="flower-collection" id="flower-collection">
+            <div class="collection-heading">
+                <div>
+                    <p class="shop-eyebrow">FIND YOUR LITTLE SOMETHING</p>
+                    <h2>The flower edit</h2>
+                </div>
+
+                <p id="flower-count" class="flower-count" aria-live="polite">
+                    8 little treasures
+                </p>
+            </div>
+
+            <div class="shop-controls">
+                <label class="shop-search">
+                    <span class="visually-hidden">Search flowers</span>
+                    <span aria-hidden="true">⌕</span>
+                    <input
+                        type="search"
+                        id="flower-search"
+                        placeholder="Find a flower..."
+                        autocomplete="off"
+                    >
+                </label>
+
+                <label class="shop-sort">
+                    <span class="visually-hidden">Sort flowers</span>
+                    <select id="flower-sort">
+                        <option value="featured">Featured first</option>
+                        <option value="price-low">Price: low to high</option>
+                        <option value="price-high">Price: high to low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="flower-filters" aria-label="Filter flowers by occasion">
+                <button class="flower-filter active"
+                        type="button" data-category="all"
+                        aria-pressed="true">Everything</button>
+
+                <button class="flower-filter"
+                        type="button" data-category="romance"
+                        aria-pressed="false">For romance</button>
+
+                <button class="flower-filter"
+                        type="button" data-category="birthday"
+                        aria-pressed="false">Birthdays</button>
+
+                <button class="flower-filter"
+                        type="button" data-category="comfort"
+                        aria-pressed="false">For comfort</button>
+
+                <button class="flower-filter"
+                        type="button" data-category="everyday"
+                        aria-pressed="false">Just because</button>
+                
+                <button
+    type="button"
+    class="flower-filter favorites-only-filter"
+    id="favorites-only-filter"
+    aria-pressed="false"
+>
+    ♡ Favorites Only
+</button>
+            </div>
+
+            <div class="flower-grid" id="flower-grid">
+
+                <article class="flower-card"
+                         data-name="Rosé Reverie"
+                         data-category="romance"
+                         data-price="1250"
+                         data-description="Pink roses, delicate textures, and a little romance."
+                         data-image="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85">
+
+                    <div class="flower-card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85"
+                            alt="Soft pink flowers arranged in a romantic style"
+                            loading="lazy"
+                        >
+                        <span class="flower-tag">A little romance</span>
+                        <button class="favorite-button"
+                                type="button"
+                                aria-label="Save Rosé Reverie to favorites"
+                                aria-pressed="false"
+                                data-favorite="rose-reverie">♡</button>
+                    </div>
+
+                    <div class="flower-card-info">
+                        <div>
+                            <h3>Rosé Reverie</h3>
+                            <p>For the words left unsaid.</p>
+                        </div>
+                        <span class="flower-price">₱1,250</span>
+                    </div>
+
+                    <button class="flower-detail-button" type="button"
+                            data-details="rose-reverie">
+                        Discover this bloom <span>↗</span>
+                    </button>
+                </article>
+
+                <article class="flower-card"
+                         data-name="Sunday Tulips"
+                         data-category="everyday"
+                         data-price="890"
+                         data-description="Fresh tulips for ordinary days that deserve a little beauty."
+                         data-image="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=900&q=85">
+
+                    <div class="flower-card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=900&q=85"
+                            alt="Fresh tulips in soft spring colors"
+                            loading="lazy"
+                        >
+                        <span class="flower-tag">Everyday favorite</span>
+                        <button class="favorite-button"
+                                type="button"
+                                aria-label="Save Sunday Tulips to favorites"
+                                aria-pressed="false"
+                                data-favorite="sunday-tulips">♡</button>
+                    </div>
+
+                    <div class="flower-card-info">
+                        <div>
+                            <h3>Sunday Tulips</h3>
+                            <p>A little joy, just because.</p>
+                        </div>
+                        <span class="flower-price">₱890</span>
+                    </div>
+
+                    <button class="flower-detail-button" type="button"
+                            data-details="sunday-tulips">
+                        Discover this bloom <span>↗</span>
+                    </button>
+                </article>
+
+                <article class="flower-card"
+                         data-name="Birthday Blush"
+                         data-category="birthday"
+                         data-price="1450"
+                         data-description="Cheerful pastel blooms made for celebrating another beautiful year."
+                         data-image="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=900&q=85">
+
+                    <div class="flower-card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=900&q=85"
+                            alt="A colorful floral arrangement for a celebration"
+                            loading="lazy"
+                        >
+                        <span class="flower-tag">Birthday blooms</span>
+                        <button class="favorite-button"
+                                type="button"
+                                aria-label="Save Birthday Blush to favorites"
+                                aria-pressed="false"
+                                data-favorite="birthday-blush">♡</button>
+                    </div>
+
+                    <div class="flower-card-info">
+                        <div>
+                            <h3>Birthday Blush</h3>
+                            <p>For another year of becoming.</p>
+                        </div>
+                        <span class="flower-price">₱1,450</span>
+                    </div>
+
+                    <button class="flower-detail-button" type="button"
+                            data-details="birthday-blush">
+                        Discover this bloom <span>↗</span>
+                    </button>
+                </article>
+
+                <article class="flower-card"
+                         data-name="Quiet Comfort"
+                         data-category="comfort"
+                         data-price="1100"
+                         data-description="Gentle, understated flowers for showing someone they are not alone."
+                         data-image="https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=900&q=85">
+
+                    <div class="flower-card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=900&q=85"
+                            alt="Gentle pastel flowers in a thoughtful arrangement"
+                            loading="lazy"
+                        >
+                        <span class="flower-tag">A gentle reminder</span>
+                        <button class="favorite-button"
+                                type="button"
+                                aria-label="Save Quiet Comfort to favorites"
+                                aria-pressed="false"
+                                data-favorite="quiet-comfort">♡</button>
+                    </div>
+
+                    <div class="flower-card-info">
+                        <div>
+                            <h3>Quiet Comfort</h3>
+                            <p>Here for you, always.</p>
+                        </div>
+                        <span class="flower-price">₱1,100</span>
+                    </div>
+
+                    <button class="flower-detail-button" type="button"
+                            data-details="quiet-comfort">
+                        Discover this bloom <span>↗</span>
+                    </button>
+                </article>
+
+                <article class="flower-card"
+                         data-name="Velvet Promise"
+                         data-category="romance"
+                         data-price="1680"
+                         data-description="Deep romantic tones for heartfelt confessions and meaningful anniversaries."
+                         data-image="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=85">
+
+                    <div class="flower-card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=85"
+                            alt="Rich red roses for a romantic occasion"
+                            loading="lazy"
+                        >
+                        <span class="flower-tag">Made with love</span>
+                        <button class="favorite-button"
+                                type="button"
+                                aria-label="Save Velvet Promise to favorites"
+                                aria-pressed="false"
+                                data-favorite="velvet-promise">♡</button>
+                    </div>
+
+                    <div class="flower-card-info">
+                        <div>
+                            <h3>Velvet Promise</h3>
+                            <p>For a love that stays.</p>
+                        </div>
+                        <span class="flower-price">₱1,680</span>
+                    </div>
+
+                    <button class="flower-detail-button" type="button"
+                            data-details="velvet-promise">
+                        Discover this bloom <span>↗</span>
+                    </button>
+                </article>
+
+                <article class="flower-card"
+                         data-name="Golden Hour"
+                         data-category="birthday"
+                         data-price="1350"
+                         data-description="Warm, cheerful colors inspired by the last golden light of the day."
+                         data-image="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=900&q=85">
+
+                    <div class="flower-card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=900&q=85"
+                            alt="Warm-toned flowers in golden light"
+                            loading="lazy"
+                        >
+                        <span class="flower-tag">A brighter day</span>
+                        <button class="favorite-button"
+                                type="button"
+                                aria-label="Save Golden Hour to favorites"
+                                aria-pressed="false"
+                                data-favorite="golden-hour">♡</button>
+                    </div>
+
+                    <div class="flower-card-info">
+                        <div>
+                            <h3>Golden Hour</h3>
+                            <p>For your brightest moments.</p>
+                        </div>
+                        <span class="flower-price">₱1,350</span>
+                    </div>
+
+                    <button class="flower-detail-button" type="button"
+                            data-details="golden-hour">
+                        Discover this bloom <span>↗</span>
+                    </button>
+                </article>
+
+                <article class="flower-card"
+                         data-name="Little Meadow"
+                         data-category="everyday"
+                         data-price="760"
+                         data-description="An airy, garden-inspired arrangement for little everyday surprises."
+                         data-image="https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=900&q=85">
+
+                    <div class="flower-card-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=900&q=85"
+                            alt="A soft, garden-inspired floral arrangement"
+                            loading="lazy"
+                        >
+                        <span class="flower-tag">Little and lovely</span>
+                        <button class="favorite-button"
+                                type="button"
+                                aria-label="Save Little Meadow to favorites"
+                                aria-pressed="false"
+                                data-favorite="little-meadow">♡</button>
+                    </div>
+
+                    <div class="flower-card-info">
+                        <div>
+                            <h3>Little Meadow</h3>
+                            <p>Small gesture, big feeling.</p>
+                        </div>
+                        <span class="flower-price">₱760</span>
+                    </div>
+
+                    <button class="flower-detail-button" type="button"
+                            data-details="little-meadow">
+                        Discover this bloom <span>↗</span>
+                    </button>
+                </article>
+
+            </div>
+
+            <div class="flower-empty-state" id="flower-empty" hidden>
+                <span>✿</span>
+                <h3>No blooms found just yet.</h3>
+                <p>Try another search or choose a different feeling.</p>
+                <button type="button" id="reset-flower-filters">
+                    See all flowers
+                </button>
+            </div>
+        </section>
+
+        <section class="shop-bottom-note">
+            <p class="shop-eyebrow">A LITTLE NOTE FROM US</p>
+            <h2>Every bloom means <em>something.</em></h2>
+            <p>
+                Found a flower you love? Save it to your Keepsakes
+                and return to it whenever you like.
+            </p>
+            <a href="keepsakes.html" class="shop-primary-button">
+                Visit your Keepsakes ↗
+            </a>
+        </section>
+    </main>
+
+    <footer class="shop-footer">
+        <a class="shop-logo" href="index.html">
+            <span>liorielle</span>
+            <small>FLORAL ATELIER</small>
+        </a>
+        <p>Flowers for the feelings words can't hold.</p>
+        <a href="index.html">Back to the little world ↑</a>
+        <small>© 2026 Liorielle Floral Atelier · A fictional floral experience</small>
+    </footer>
+
+    <dialog class="flower-dialog" id="flower-dialog">
+        <button class="flower-dialog-close"
+                type="button"
+                aria-label="Close flower details">×</button>
+        <img id="dialog-flower-image" src="" alt="">
+        <div class="flower-dialog-content">
+            <p class="shop-eyebrow">A LITTLE SOMETHING FOR YOU</p>
+            <h2 id="dialog-flower-name"></h2>
+            <p id="dialog-flower-description"></p>
+            <strong id="dialog-flower-price"></strong>
+            <button type="button" id="dialog-favorite-button"
+                    class="shop-primary-button">
+                ♡ Save to favorites
+            </button>
+        </div>
+    </dialog>
+
+</body>
+</html>

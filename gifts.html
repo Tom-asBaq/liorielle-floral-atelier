@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F4E2E5">
+    <title>Digital Gifts | Liorielle Floral Atelier</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="gifts-page">
+
+    <header class="gift-header">
+        <a href="index.html" class="gift-brand">
+            <span class="gift-brand-mark">L.</span>
+            <span>
+                <strong>Liorielle</strong>
+                <small>FLORAL ATELIER</small>
+            </span>
+        </a>
+
+        <nav class="gift-nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Flower Shop</a>
+            <a href="create.html">Bouquet Creator</a>
+            <a href="gifts.html" class="active">Digital Gifts</a>
+            <a href="keepsakes.html">Keepsakes</a>
+        </nav>
+    </header>
+
+    <main class="digital-gifts">
+
+        <section class="gift-hero">
+            <div class="gift-hero-copy">
+                <span class="gift-eyebrow">A LITTLE SOMETHING FROM THE HEART</span>
+
+                <h1>Some feelings<br>
+                    deserve a <em>letter.</em>
+                </h1>
+
+                <p>
+                    Create a little digital keepsake for someone special.
+                    A few honest words, a thoughtful design, and a moment
+                    they can open whenever they need it.
+                </p>
+
+                <a href="#letter-studio" class="gift-primary-link">
+                    Create a letter <span>↗</span>
+                </a>
+            </div>
+
+            <div class="gift-hero-art" aria-label="Decorative illustration of flowers and a letter">
+                <div class="gift-art-sun"></div>
+                <span class="gift-art-sparkle sparkle-one">✳</span>
+                <span class="gift-art-sparkle sparkle-two">✦</span>
+
+                <div class="gift-art-flower flower-left">🌷</div>
+                <div class="gift-art-flower flower-right">🌼</div>
+
+                <div class="gift-art-letter">
+                    <span class="art-letter-line"></span>
+                    <span class="art-letter-line short"></span>
+                    <span class="art-letter-heart">♡</span>
+                    <span class="art-letter-caption">just for you</span>
+                </div>
+
+                <span class="gift-art-caption">made with a little love</span>
+            </div>
+        </section>
+
+        <section class="gift-intro" id="letter-studio">
+            <span class="gift-eyebrow">THE LITTLE LETTER STUDIO</span>
+            <h2>Put your feelings into words.</h2>
+            <p>
+                Personalize your letter, choose its look, then open your
+                envelope to see your creation come to life.
+            </p>
+        </section>
+
+        <section class="gift-workspace">
+
+            <div class="gift-editor">
+
+                <div class="gift-section-heading">
+                    <span class="gift-step">01</span>
+                    <div>
+                        <h3>Make it personal</h3>
+                        <p>A few details make it yours.</p>
+                    </div>
+                </div>
+
+                <label class="gift-field">
+                    <span>Who is this letter for?</span>
+                    <input
+                        type="text"
+                        id="gift-recipient"
+                        maxlength="50"
+                        placeholder="e.g. Someone special"
+                    >
+                </label>
+
+                <label class="gift-field">
+                    <span>Your name</span>
+                    <input
+                        type="text"
+                        id="gift-sender"
+                        maxlength="40"
+                        placeholder="e.g. With love, ..."
+                    >
+                </label>
+
+                <label class="gift-field">
+                    <span>Occasion</span>
+                    <select id="gift-occasion">
+                        <option value="Just Because">Just Because</option>
+                        <option value="Birthday Wishes">Birthday Wishes</option>
+                        <option value="A Little Thank You">A Little Thank You</option>
+                        <option value="With Love">With Love</option>
+                        <option value="I'm Sorry">I'm Sorry</option>
+                        <option value="Congratulations">Congratulations</option>
+                        <option value="Words of Encouragement">Words of Encouragement</option>
+                    </select>
+                </label>
+
+                <label class="gift-field">
+                    <span>Your message</span>
+                    <textarea
+                        id="gift-message"
+                        rows="7"
+                        maxlength="1200"
+                        placeholder="Write the words you've been meaning to say..."
+                    ></textarea>
+                    <small class="gift-character-count">
+                        <span id="gift-char-count">0</span>/1200 characters
+                    </small>
+                </label>
+
+                <div class="gift-section-heading theme-heading">
+                    <span class="gift-step">02</span>
+                    <div>
+                        <h3>Choose a feeling</h3>
+                        <p>Pick the look that feels right.</p>
+                    </div>
+                </div>
+
+                <div class="gift-themes">
+                    <button
+                        type="button"
+                        class="gift-theme-option selected"
+                        data-theme="rosewater"
+                        aria-pressed="true"
+                    >
+                        <span class="theme-swatch rosewater-swatch"></span>
+                        <span>Rosewater</span>
+                        <small>Soft & romantic</small>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="gift-theme-option"
+                        data-theme="sage"
+                        aria-pressed="false"
+                    >
+                        <span class="theme-swatch sage-swatch"></span>
+                        <span>Sage Garden</span>
+                        <small>Gentle & natural</small>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="gift-theme-option"
+                        data-theme="midnight"
+                        aria-pressed="false"
+                    >
+                        <span class="theme-swatch midnight-swatch"></span>
+                        <span>Midnight</span>
+                        <small>Deep & elegant</small>
+                    </button>
+                </div>
+
+                <div class="gift-editor-actions">
+                    <button type="button" id="gift-reset" class="gift-secondary-btn">
+                        Start over
+                    </button>
+
+                    <button type="button" id="gift-save" class="gift-save-btn">
+                        Save this gift ♡
+                    </button>
+                </div>
+
+                <p class="gift-save-note" id="gift-save-status" aria-live="polite">
+                    Your creation stays in this browser.
+                </p>
+            </div>
+
+            <div class="gift-preview-column">
+                <div class="gift-preview-heading">
+                    <div>
+                        <span class="gift-eyebrow">YOUR LITTLE CREATION</span>
+                        <h3>A letter waiting to be opened.</h3>
+                    </div>
+                    <span class="gift-preview-flower">✿</span>
+                </div>
+
+                <div class="gift-envelope-stage" id="gift-envelope-stage">
+                    <div
+                        class="gift-envelope gift-theme-rosewater"
+                        id="gift-envelope"
+                    >
+                        <div class="gift-envelope-back"></div>
+
+                        <div class="gift-letter" id="gift-letter">
+                            <div class="gift-letter-inner">
+                                <span class="preview-occasion" id="preview-occasion">
+                                    JUST BECAUSE
+                                </span>
+
+                                <h3 id="preview-title">Dear Someone Special,</h3>
+
+                                <div class="preview-message" id="preview-message">
+                                    <p>Your words will appear here.</p>
+                                </div>
+
+                                <div class="preview-signature">
+                                    <span>With love,</span>
+                                    <strong id="preview-sender">Someone who cares ♡</strong>
+                                </div>
+
+                                <span class="preview-letter-flower">❀</span>
+                            </div>
+                        </div>
+
+                        <div class="gift-envelope-pocket"></div>
+                        <div class="gift-envelope-flap"></div>
+                        <div class="gift-envelope-seal">♡</div>
+                    </div>
+                </div>
+
+                <div class="gift-preview-controls">
+                    <button type="button" id="gift-open-envelope" class="gift-open-btn">
+                        <span>♡</span> Open your letter
+                    </button>
+
+                    <button
+                        type="button"
+                        id="gift-close-envelope"
+                        class="gift-close-btn"
+                        hidden
+                    >
+                        Close letter
+                    </button>
+                </div>
+
+                <p class="gift-preview-hint" id="gift-preview-hint" aria-live="polite">
+                    A little surprise is waiting inside.
+                </p>
+
+                <div class="gift-copy-area">
+                    <button type="button" id="gift-copy-message" class="gift-copy-btn">
+                        Copy letter text
+                    </button>
+
+                    <button type="button" id="gift-download" class="gift-copy-btn">
+                        Download letter
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="gift-bottom-note">
+            <span>❀</span>
+            <p>
+                It doesn't have to be perfect.
+                It just has to come from you.
+            </p>
+            <small>LIORIELLE FLORAL ATELIER</small>
+        </section>
+
+    </main>
+
+    <footer class="gift-footer">
+        <a href="index.html">Liorielle Floral Atelier</a>
+        <span>Flowers for the feelings words can't hold.</span>
+    </footer>
+
+</body>
+</html>

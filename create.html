@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F4E2E5">
+    <meta name="description" content="Create a bouquet that feels like you at Liorielle Floral Atelier.">
+    <title>Bouquet Creator — Liorielle Floral Atelier</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="creator-page">
+    <div class="creator-announcement">
+        A little love, arranged by you ✿
+    </div>
+
+    <header class="creator-header">
+        <a class="creator-logo" href="index.html">
+            <span>liorielle</span>
+            <small>FLORAL ATELIER</small>
+        </a>
+
+        <nav class="creator-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Flower Shop</a>
+            <a href="create.html" class="active" aria-current="page">Bouquet Creator</a>
+            <a href="gifts.html">Digital Gifts</a>
+            <a href="keepsakes.html">Keepsakes</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="creator-intro">
+            <p class="creator-eyebrow">YOUR FLOWERS, YOUR STORY</p>
+            <h1>Made by you,<br><em>meant for someone.</em></h1>
+            <p>
+                Pick your favorite blooms, dress them up, and leave a little
+                message from the heart. Your bouquet, your way.
+            </p>
+        </section>
+
+        <section class="creator-workspace">
+            <div class="creator-options">
+
+                <!-- STEP 00: Choose your bouquet style -->
+                <section class="creator-step creator-style-step">
+                    <div class="creator-step-heading">
+                        <span class="creator-step-number">00</span>
+                        <div>
+                            <h2>Choose your style</h2>
+                            <p>Two little ways to share your feelings.</p>
+                        </div>
+                    </div>
+
+                    <div class="creator-style-options">
+                        <label class="creator-style-option active">
+                            <input
+                                type="radio"
+                                name="bouquet-style"
+                                value="classic"
+                                checked
+                            >
+                            <span class="creator-style-icon">✿</span>
+                            <span class="creator-style-name">Classic Bouquet</span>
+                            <span class="creator-style-description">
+                                Soft, elegant, and timeless.
+                            </span>
+                        </label>
+
+                        <label class="creator-style-option">
+                            <input
+                                type="radio"
+                                name="bouquet-style"
+                                value="doodle"
+                            >
+                            <span class="creator-style-icon">♡</span>
+                            <span class="creator-style-name">Doodle Gift</span>
+                            <span class="creator-style-description">
+                                Playful, hand-drawn, and full of personality.
+                            </span>
+                        </label>
+                    </div>
+                </section>
+
+                <!-- STEP 01: Choose your blooms -->
+                <section class="creator-step">
+                    <div class="creator-step-heading">
+                        <span class="creator-step-number">01</span>
+                        <div>
+                            <h2>Choose your blooms</h2>
+                            <p>Every flower brings its own feeling.</p>
+                        </div>
+                    </div>
+
+                    <div class="creator-flower-options">
+                        <label class="creator-flower-option">
+                            <input type="checkbox" name="flower" value="rose">
+                            <span class="creator-flower-emoji">🌹</span>
+                            <span class="creator-flower-name">Classic roses</span>
+                            <span class="creator-flower-price">₱120 / stem</span>
+                            <span class="creator-quantity">
+                                <span>Quantity</span>
+                                <input type="number" name="qty-rose" min="1" max="12" value="3" disabled>
+                            </span>
+                        </label>
+
+                        <label class="creator-flower-option">
+                            <input type="checkbox" name="flower" value="tulip">
+                            <span class="creator-flower-emoji">🌷</span>
+                            <span class="creator-flower-name">Sweet tulips</span>
+                            <span class="creator-flower-price">₱100 / stem</span>
+                            <span class="creator-quantity">
+                                <span>Quantity</span>
+                                <input type="number" name="qty-tulip" min="1" max="12" value="3" disabled>
+                            </span>
+                        </label>
+
+                        <label class="creator-flower-option">
+                            <input type="checkbox" name="flower" value="sunflower">
+                            <span class="creator-flower-emoji">🌻</span>
+                            <span class="creator-flower-name">Sunny sunflowers</span>
+                            <span class="creator-flower-price">₱90 / stem</span>
+                            <span class="creator-quantity">
+                                <span>Quantity</span>
+                                <input type="number" name="qty-sunflower" min="1" max="12" value="2" disabled>
+                            </span>
+                        </label>
+
+                        <label class="creator-flower-option">
+                            <input type="checkbox" name="flower" value="daisy">
+                            <span class="creator-flower-emoji">🌼</span>
+                            <span class="creator-flower-name">Little daisies</span>
+                            <span class="creator-flower-price">₱70 / stem</span>
+                            <span class="creator-quantity">
+                                <span>Quantity</span>
+                                <input type="number" name="qty-daisy" min="1" max="12" value="3" disabled>
+                            </span>
+                        </label>
+                    </div>
+
+                    <p class="creator-hint">
+                        Choose at least one flower type. You can select up to 12 stems of each.
+                    </p>
+                </section>
+
+                <!-- STEP 02: Dress it up -->
+                <section class="creator-step">
+                    <div class="creator-step-heading">
+                        <span class="creator-step-number">02</span>
+                        <div>
+                            <h2>Dress it up</h2>
+                            <p>The little details make it yours.</p>
+                        </div>
+                    </div>
+
+                    <fieldset class="creator-fieldset">
+                        <legend>Wrapping paper</legend>
+                        <div class="creator-swatches">
+                            <label class="creator-swatch">
+                                <input type="radio" name="wrapping" value="ivory" checked>
+                                <span class="creator-swatch-color swatch-ivory"></span>
+                                <span>Warm ivory</span>
+                                <small>Free</small>
+                            </label>
+
+                            <label class="creator-swatch">
+                                <input type="radio" name="wrapping" value="blush">
+                                <span class="creator-swatch-color swatch-blush"></span>
+                                <span>Soft blush</span>
+                                <small>+₱50</small>
+                            </label>
+
+                            <label class="creator-swatch">
+                                <input type="radio" name="wrapping" value="sage">
+                                <span class="creator-swatch-color swatch-sage"></span>
+                                <span>Garden sage</span>
+                                <small>+₱50</small>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="creator-fieldset">
+                        <legend>Ribbon color</legend>
+                        <div class="creator-ribbon-options">
+                            <label>
+                                <input type="radio" name="ribbon" value="rose" checked>
+                                <span class="ribbon-rose"></span> Rose
+                            </label>
+                            <label>
+                                <input type="radio" name="ribbon" value="mulberry">
+                                <span class="ribbon-mulberry"></span> Mulberry
+                            </label>
+                            <label>
+                                <input type="radio" name="ribbon" value="sage">
+                                <span class="ribbon-sage"></span> Sage
+                            </label>
+                            <label>
+                                <input type="radio" name="ribbon" value="gold">
+                                <span class="ribbon-gold"></span> Champagne
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <label class="creator-select-label" for="bouquet-size">
+                        Bouquet size
+                    </label>
+                    <select id="bouquet-size">
+                        <option value="petite">Petite — ₱100</option>
+                        <option value="classic" selected>Classic — ₱180</option>
+                        <option value="grand">Grand — ₱300</option>
+                    </select>
+                </section>
+
+                <!-- STEP 03: Add a personal note -->
+                <section class="creator-step">
+                    <div class="creator-step-heading">
+                        <span class="creator-step-number">03</span>
+                        <div>
+                            <h2>Say it with a note</h2>
+                            <p>Sometimes the smallest words mean the most.</p>
+                        </div>
+                    </div>
+
+                    <label class="creator-select-label" for="note-recipient">
+                        Who is this bouquet for?
+                    </label>
+                    <input
+                        class="creator-text-input"
+                        id="note-recipient"
+                        type="text"
+                        maxlength="60"
+                        placeholder="A name or a little nickname"
+                    >
+
+                    <label class="creator-select-label" for="bouquet-note">
+                        Your message
+                    </label>
+                    <textarea
+                        class="creator-textarea"
+                        id="bouquet-note"
+                        maxlength="240"
+                        rows="4"
+                        placeholder="Write something from the heart..."
+                    ></textarea>
+
+                    <div class="creator-character-count">
+                        <span id="note-count">0</span>/240
+                    </div>
+                </section>
+            </div>
+
+            <!-- Bouquet preview -->
+            <aside class="creator-preview-panel">
+                <div class="creator-preview-top">
+                    <p class="creator-eyebrow">A LITTLE SNEAK PEEK</p>
+                    <span>YOUR CREATION · 001</span>
+                </div>
+
+                <div
+                    class="creator-preview-art"
+                    id="creator-preview-art"
+                    data-wrapping="ivory"
+                >
+                    <div class="creator-preview-caption">arranged with love</div>
+
+                    <div class="creator-bouquet" id="creator-bouquet" aria-live="polite">
+                        <span class="preview-flower">🌹</span>
+                        <span class="preview-flower">🌹</span>
+                        <span class="preview-flower">🌷</span>
+                    </div>
+
+                    <div class="creator-wrap-shape"></div>
+                    <div class="creator-ribbon-bow" id="creator-ribbon-bow">🎀</div>
+                </div>
+
+                <div class="creator-preview-details">
+                    <span class="creator-eyebrow">MADE JUST FOR YOU</span>
+                    <h2 id="preview-title">A Little Love Story</h2>
+                    <p id="preview-summary">
+                        A thoughtful mix of your favorite blooms.
+                    </p>
+
+                    <div class="creator-note-preview">
+                        <span>✉ A little note</span>
+                        <p id="preview-recipient">For someone special</p>
+                        <p id="preview-message">Your words will find their way here.</p>
+                    </div>
+
+                    <div class="creator-price-row">
+                        <div>
+                            <span>YOUR CREATION TOTAL</span>
+                            <small>Illustrative price · No purchase</small>
+                        </div>
+                        <strong id="creator-total">₱640</strong>
+                    </div>
+
+                    <button class="creator-save-button" type="button" id="save-bouquet">
+                        Save to Keepsakes ♡
+                    </button>
+
+                    <p
+                        class="creator-save-status"
+                        id="creator-save-status"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                    <button class="creator-reset-button" type="button" id="reset-bouquet">
+                        Start with a fresh canvas ↺
+                    </button>
+                </div>
+            </aside>
+        </section>
+
+        <section class="creator-footer-note">
+            <p class="creator-eyebrow">
+                FLOWERS FOR THE FEELINGS WORDS CAN'T HOLD
+            </p>
+            <h2>Every little detail<br><em>tells a story.</em></h2>
+        </section>
+    </main>
+
+    <footer class="creator-footer">
+        <a class="creator-logo" href="index.html">
+            <span>liorielle</span>
+            <small>FLORAL ATELIER</small>
+        </a>
+        <p>A fictional floral experience, made with a little love.</p>
+        <a href="shop.html">Back to the Flower Shop ↗</a>
+    </footer>
+</body>
+</html>

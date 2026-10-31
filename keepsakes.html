@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F4E2E5">
+    <title>My Keepsakes | Liorielle Floral Atelier</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="keepsakes-page">
+
+    <header class="keepsake-header">
+        <a href="index.html" class="keepsake-brand">
+            <span class="keepsake-brand-mark">L.</span>
+            <span>
+                <strong>Liorielle</strong>
+                <small>FLORAL ATELIER</small>
+            </span>
+        </a>
+
+        <nav class="keepsake-nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Flower Shop</a>
+            <a href="create.html">Bouquet Creator</a>
+            <a href="gifts.html">Digital Gifts</a>
+            <a href="keepsakes.html" class="active">Keepsakes</a>
+        </nav>
+    </header>
+
+    <main class="keepsakes-main">
+
+        <section class="keepsake-hero">
+            <div class="keepsake-hero-copy">
+                <span class="keepsake-eyebrow">YOUR LITTLE COLLECTION</span>
+                <h1>Little things<br>worth <em>keeping.</em></h1>
+                <p>
+                    A home for the bouquets you've imagined and the words
+                    you've put into letters. Keep the creations that mean
+                    something to you, all in one place.
+                </p>
+
+                <a href="#keepsake-library" class="keepsake-hero-link">
+                    Explore my keepsakes <span>↓</span>
+                </a>
+            </div>
+
+            <div class="keepsake-hero-art" aria-hidden="true">
+                <div class="keepsake-art-circle"></div>
+                <div class="keepsake-art-card keepsake-art-card-back">
+                    <span>with love</span>
+                    <span>♡</span>
+                </div>
+                <div class="keepsake-art-card keepsake-art-card-front">
+                    <span class="keepsake-art-flower">🌷</span>
+                    <span class="keepsake-art-caption">a little memory</span>
+                    <span class="keepsake-art-heart">♡</span>
+                </div>
+                <span class="keepsake-art-sparkle">✳</span>
+            </div>
+        </section>
+
+        <section class="keepsake-summary" aria-label="Collection summary">
+            <div class="keepsake-summary-item">
+                <span class="keepsake-summary-icon">❀</span>
+                <div>
+                    <strong id="keepsake-total-count">0</strong>
+                    <span>Total keepsakes</span>
+                </div>
+            </div>
+
+            <div class="keepsake-summary-divider"></div>
+
+            <div class="keepsake-summary-item">
+                <span class="keepsake-summary-icon">🌷</span>
+                <div>
+                    <strong id="keepsake-bouquet-count">0</strong>
+                    <span>Saved bouquets</span>
+                </div>
+            </div>
+
+            <div class="keepsake-summary-divider"></div>
+
+            <div class="keepsake-summary-item">
+                <span class="keepsake-summary-icon">♡</span>
+                <div>
+                    <strong id="keepsake-letter-count">0</strong>
+                    <span>Digital letters</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="keepsake-library" id="keepsake-library">
+            <div class="keepsake-library-heading">
+                <div>
+                    <span class="keepsake-eyebrow">THE MEMORY SHELF</span>
+                    <h2>Your keepsake collection</h2>
+                    <p>Every little creation, saved in one place.</p>
+                </div>
+
+                <a href="create.html" class="keepsake-create-link">
+                    Create something new <span>↗</span>
+                </a>
+            </div>
+
+            <div class="keepsake-toolbar">
+                <div class="keepsake-filters" role="group" aria-label="Filter keepsakes">
+                    <button type="button" class="keepsake-filter active"
+                        data-filter="all" aria-pressed="true">All</button>
+
+                    <button type="button" class="keepsake-filter"
+                        data-filter="bouquet" aria-pressed="false">Bouquets</button>
+
+                    <button type="button" class="keepsake-filter"
+                        data-filter="letter" aria-pressed="false">Letters</button>
+                </div>
+
+                <label class="keepsake-search">
+                    <span aria-hidden="true">⌕</span>
+                    <input
+                        type="search"
+                        id="keepsake-search"
+                        placeholder="Find a keepsake..."
+                        aria-label="Search keepsakes"
+                    >
+                </label>
+            </div>
+
+            <div class="keepsake-results-line">
+                <span id="keepsake-results-count">Showing 0 keepsakes</span>
+                <button type="button" id="keepsake-refresh" class="keepsake-refresh">
+                    ↻ Refresh collection
+                </button>
+            </div>
+
+            <div class="keepsake-grid" id="keepsake-grid" aria-live="polite"></div>
+
+            <div class="keepsake-empty" id="keepsake-empty" hidden>
+                <span class="keepsake-empty-icon">❀</span>
+                <h3 id="keepsake-empty-title">Your shelf is waiting.</h3>
+                <p id="keepsake-empty-message">
+                    Save a bouquet or digital letter, and it'll appear here.
+                </p>
+                <div class="keepsake-empty-actions">
+                    <a href="create.html">Create a bouquet</a>
+                    <a href="gifts.html">Write a letter</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="keepsake-note">
+            <span>♡</span>
+            <h2>Made with feeling. Kept with love.</h2>
+            <p>
+                Your little creations deserve a place to stay.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="keepsake-footer">
+        <a href="index.html">Liorielle Floral Atelier</a>
+        <span>Flowers for the feelings words can't hold.</span>
+    </footer>
+
+    <dialog id="keepsake-detail-dialog" class="keepsake-dialog">
+        <div class="keepsake-dialog-inner">
+            <button
+                type="button"
+                class="keepsake-dialog-close"
+                id="keepsake-detail-close"
+                aria-label="Close details"
+            >×</button>
+
+            <span class="keepsake-eyebrow" id="keepsake-detail-type">
+                A LITTLE KEEPSAKE
+            </span>
+
+            <h2 id="keepsake-detail-title">Your creation</h2>
+
+            <div id="keepsake-detail-content" class="keepsake-detail-content"></div>
+
+            <div class="keepsake-dialog-actions">
+                <button type="button" id="keepsake-detail-copy" hidden>
+                    Copy letter text
+                </button>
+                <button type="button" id="keepsake-detail-remove" class="danger">
+                    Remove keepsake
+                </button>
+            </div>
+
+            <p id="keepsake-detail-status" aria-live="polite"></p>
+        </div>
+    </dialog>
+
+</body>
+</html>
